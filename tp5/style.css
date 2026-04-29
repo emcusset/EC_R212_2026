@@ -1,0 +1,54 @@
+:root {
+  --primary: #6366f1; /* Une couleur un peu sympa */
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --spacing: 1.5rem;
+  --radius: 12px;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: var(--spacing);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* LA GRILLE MAGIQUE */
+.projets-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing);
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover, .card:focus {
+  transform: translateY(-5px);
+  outline: 3px solid var(--primary);
+}
+
+/* Modale cachée par défaut */
+.modal[aria-hidden="true"] { display: none; }
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content { background: white; padding: 2rem; border-radius: var(--radius); position: relative; }

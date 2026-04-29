@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Emma MMI</h1> <nav>
+      <button class="filter-btn" data-tag="all">Tous</button>
+      <button class="filter-btn" data-tag="Web">Web</button>
+      <button class="filter-btn" data-tag="Design">Design</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projets-section">
+      <h2>Mes Réalisations</h2>
+      <div class="projets-grille" id="port-grille">
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact : emma.cusset@etu.uca.fr</p>
+  </footer>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button id="close-modal">×</button>
+      <div id="modal-details"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
